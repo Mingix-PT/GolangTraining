@@ -17,8 +17,8 @@ func NewList[T any](val T) *List[T] {
 }
 
 func (l *List[T]) PushFront(val T) {
-	l.next = &List[T] {
-		val: l.val,
+	l.next = &List[T]{
+		val:  l.val,
 		next: l.next,
 	}
 	l.val = val
@@ -35,8 +35,8 @@ func (l *List[T]) PushBack(val T) {
 	for l.next != nil {
 		l = l.next
 	}
-	l.next = &List[T] {
-		val: val,
+	l.next = &List[T]{
+		val:  val,
 		next: nil,
 	}
 }
@@ -102,8 +102,8 @@ func main() {
 	fmt.Println(l.PopFront())
 	fmt.Println(l)
 
-	fmt.Println(l.PopBack())  
-	fmt.Println(l)            
+	fmt.Println(l.PopBack())
+	fmt.Println(l)
 
 	fmt.Println(l.Len())
 

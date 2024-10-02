@@ -3,10 +3,11 @@ package main
 import (
 	"image"
 	"image/color"
+
 	"golang.org/x/tour/pic"
 )
 
-type Image struct{
+type Image struct {
 	w, h int
 }
 
