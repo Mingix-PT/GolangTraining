@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+package todo;
+
+option go_package = "GolangTraining/grpc/todo/todo";
+
+service Todo {
+  rpc GetTodo (RequestTodo) returns (ReplyTodo) {}
+}
+
+message RequestTodo {
+  int32 id = 1;
+}
+
+message ReplyTodo {
+  int32 id = 1;
+  string msg = 2;
+}
