@@ -1,0 +1,15 @@
+syntax = "proto3";
+option go_package = "github.com/Mingix-PT/demo-grpc/gettodo/gettodo";
+
+message GetToDoRequest{
+    string id = 1;
+}
+
+message GetToDoResponse{
+    string id = 1;
+    string title = 2;
+}
+
+service RandomToDo {
+  rpc GetToDo (GetToDoRequest) returns (GetToDoResponse) {}
+}
